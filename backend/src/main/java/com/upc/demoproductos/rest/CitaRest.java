@@ -16,10 +16,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/api") // http://localhost:8080/api
 public class CitaRest {
-    @Autowired
-    private IPacienteNegocio pacienteNegocio;
-    @Autowired
-    private IPsicologoNegocio psicologoNegocio;
+//    @Autowired
+//    private IPacienteNegocio pacienteNegocio;
+//    @Autowired
+//    private IPsicologoNegocio psicologoNegocio;
     @Autowired
     private ICitaNegocio citaNegocio;
 
@@ -28,23 +28,25 @@ public class CitaRest {
     {
       "paciente": {
         "codigo": 1
+        }
       },
       "psicologo": {
         "codigo": 1
+        }
       },
-      "fecha": "2024-03-01",
-      "hora": "20:00",
+      "fecha": "2024-02-03",
+      "hora": "20:05",
       "estado": "reservado",
       "apuntes": ""
     }
      */
     @PostMapping("/cita") // http://localhost:8080/api/cita
     public Cita registrar(@RequestBody Cita cita) throws Exception {
-        Paciente paciente = pacienteNegocio.buscar(cita.getPaciente().getCodigo());
-        cita.setPaciente(paciente);
-
-        Psicologo psicologo = psicologoNegocio.buscar(cita.getPsicologo().getCodigo());
-        cita.setPsicologo(psicologo);
+//        Paciente paciente = pacienteNegocio.buscar(cita.getPaciente().getCodigo());
+//        cita.setPaciente(paciente);
+//
+//        Psicologo psicologo = psicologoNegocio.buscar(cita.getPsicologo().getCodigo());
+//        cita.setPsicologo(psicologo);
 
         return citaNegocio.registrar(cita);
     }
