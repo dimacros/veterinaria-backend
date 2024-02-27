@@ -15,6 +15,20 @@ public class PacienteRest {
     @Autowired
     private IPacienteNegocio pacienteNegocio;
 
+    /*
+    Example:
+    {
+      "nombres": "Mario",
+      "apellidos": "Inga",
+      "dni": "12345678",
+      "genero": "string",
+      "distrito": {
+        "codigo": 1
+      },
+      "email": "mario21ic@gmail.com",
+      "clave": "miclave123"
+    }
+     */
     @PostMapping("/paciente") // http://localhost:8080/api/producto
     public Paciente registrar(@RequestBody Paciente paciente) {
         return pacienteNegocio.registrar(paciente);

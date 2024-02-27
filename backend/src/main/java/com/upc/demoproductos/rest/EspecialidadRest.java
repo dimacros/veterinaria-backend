@@ -15,6 +15,12 @@ public class EspecialidadRest {
     @Autowired
     private IEspecialidadNegocio especialidadNegocio;
 
+    /*
+    Example:
+    {
+      "nombre": "salud"
+    }
+     */
     @PostMapping("/especialidad") // http://localhost:8080/api/especialidad
     public Especialidad registrar(@RequestBody Especialidad especialidad) {
         return especialidadNegocio.registrar(especialidad);

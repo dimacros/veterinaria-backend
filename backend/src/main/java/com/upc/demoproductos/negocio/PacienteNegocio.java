@@ -23,7 +23,7 @@ public class PacienteNegocio implements IPacienteNegocio {
     public Paciente buscar(Long codigo) throws Exception {
         // where id =
         return iPacienteRepositorio.findById(codigo)
-                .orElseThrow(() -> new Exception("No se encontro el producto con codigo: " + codigo));
+                .orElseThrow(() -> new Exception("No se encontro el Paciente con codigo: " + codigo));
     }
 
     @Override

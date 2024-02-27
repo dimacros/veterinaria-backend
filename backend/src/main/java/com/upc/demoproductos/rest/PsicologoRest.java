@@ -17,6 +17,27 @@ public class PsicologoRest {
     @Autowired
     private IPsicologoNegocio psicologoNegocio;
 
+    /*
+    Example:
+    {
+      "nombres": "Juan",
+      "apellidos": "Perez",
+      "dni": "87654321",
+      "genero": "string",
+      "distrito": {
+        "codigo": 1
+      },
+      "cmp": "cmp123",
+      "cpp": "cpp123",
+      "experiencia": "8",
+      "especialidad": {
+        "codigo": 1
+      },
+      "estudios": "Universitarios",
+      "email": "juanpe@gmail.com",
+      "clave": "clave1234"
+    }
+     */
     @PostMapping("/psicologo") // http://localhost:8080/api/psicologo
     public Psicologo registrar(@RequestBody Psicologo psicologo) {
         return psicologoNegocio.registrar(psicologo);

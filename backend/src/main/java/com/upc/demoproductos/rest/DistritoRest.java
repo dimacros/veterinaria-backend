@@ -17,6 +17,12 @@ public class DistritoRest {
     private IDistritoNegocio distritoNegocio;
 
 
+    /*
+    Example:
+    {
+      "nombre": "Lince"
+    }
+     */
     @PostMapping("/distrito") // http://localhost:8080/api/distrito
     public Distrito registrar(@RequestBody Distrito distrito) {
         return distritoNegocio.registrar(distrito);
