@@ -11,16 +11,26 @@ import java.util.List;
 public class Psicologo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "psicologo_codigo")
     private Long codigo;
+
     private String nombres;
     private String apellidos;
     private String dni;
     private String genero;
-    private String distrito;
+
+    @ManyToOne
+    @JoinColumn(name = "distrito_codigo")
+    private Distrito distrito;
+
     private String cmp;
     private String cpp;
     private String experiencia;
-//    private List<Especialidad> especialidades;
+
+    @ManyToOne
+    @JoinColumn(name = "especialidad_codigo")
+    private Especialidad especialidad;
+
     private String estudios;
     private String email;
     private String clave;

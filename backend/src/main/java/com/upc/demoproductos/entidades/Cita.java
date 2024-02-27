@@ -12,13 +12,26 @@ import java.util.Date;
 public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "especialidad_codigo")
     private Long codigo;
 
 //    private Paciente paciente;
 //    private Psicologo psicologo;
+    @ManyToOne
+    @JoinColumn(name = "paciente_codigo")
+    private Paciente paciente;
+
+    @ManyToOne
+    @JoinColumn(name = "psicologo_codigo")
+    private Psicologo psicologo;
+
 //    private Especialidad especialidad;
+
+//    @Temporal(TemporalType.TIMESTAMP)
+//    private Date fechaHora;
     private String fecha;
     private String hora;
+
     private String estado;
     private String apuntes;
 

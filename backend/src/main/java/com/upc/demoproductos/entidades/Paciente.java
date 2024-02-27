@@ -9,13 +9,18 @@ import lombok.Data;
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "paciente_codigo")
     private Long codigo;
 
     private String nombres;
     private String apellidos;
     private String dni;
     private String genero;
-    private String distrito;
+
+    @ManyToOne
+    @JoinColumn(name = "distrito_codigo")
+    private Distrito distrito;
+
     private String email;
     private String clave;
 
