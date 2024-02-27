@@ -11,6 +11,7 @@ import java.util.List;
 public class Psicologo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long codigo;
     private String nombres;
     private String apellidos;
     private String dni;

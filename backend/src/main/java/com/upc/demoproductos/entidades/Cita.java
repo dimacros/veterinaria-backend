@@ -12,6 +12,8 @@ import java.util.Date;
 public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long codigo;
+
 //    private Paciente paciente;
 //    private Psicologo psicologo;
 //    private Especialidad especialidad;

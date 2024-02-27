@@ -9,6 +9,8 @@ import lombok.Data;
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long codigo;
+
     private String nombres;
     private String apellidos;
     private String dni;
