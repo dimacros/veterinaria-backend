@@ -14,5 +14,7 @@ public interface IPsicologoNegocio {
 
     public Psicologo actualizar(Psicologo psicologo) throws Exception;
 
+    void eliminar(Long id) throws Exception;
+
 //    public boolean eliminar(Long codigo) throws Exception;
 }

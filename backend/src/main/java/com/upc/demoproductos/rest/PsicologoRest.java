@@ -66,7 +66,10 @@ public class PsicologoRest {
         return psicologoNegocio.actualizar(psicologo);
     }
 
-    // TODO Eliminar
+    @DeleteMapping("/psicologo")
+    public void eliminar(@PathVariable Long id) throws Exception {
+        psicologoNegocio.eliminar(id);
+    }
 
     // Swagger
 

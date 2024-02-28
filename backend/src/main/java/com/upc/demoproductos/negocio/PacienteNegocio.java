@@ -36,4 +36,10 @@ public class PacienteNegocio implements IPacienteNegocio {
         buscar(paciente.getCodigo()); // no requiere asignar a una var
         return iPacienteRepositorio.save(paciente);
     }
+
+    @Override
+    public void eliminar(Long id) throws Exception {
+        Paciente paciente = buscar(id);
+        iPacienteRepositorio.delete(paciente);
+    }
 }

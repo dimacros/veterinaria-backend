@@ -74,7 +74,11 @@ public class CitaRest {
         return citaNegocio.actualizar(cita);
     }
 
-    // TODO Eliminar
+    @DeleteMapping("/cita") // http://localhost:8080/api/cita
+    public void eliminar(@PathVariable Long id) throws Exception {
+        citaNegocio.eliminar(id);
+    }
+
 
     // Swagger
 

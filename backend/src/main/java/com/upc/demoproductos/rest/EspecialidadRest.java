@@ -48,8 +48,10 @@ public class EspecialidadRest {
 //    public Paciente actualizar(@RequestBody Paciente paciente) throws Exception {
 //        return distritoNegocio.actualizar(paciente);
 //    }
-
-    // TODO Eliminar
+    @DeleteMapping("/especialidad")
+    public void eliminar(@PathVariable Long id) throws Exception {
+        especialidadNegocio.eliminar(id);
+    }
 
     // Swagger
 

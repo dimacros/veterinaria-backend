@@ -13,5 +13,7 @@ public interface IPacienteNegocio {
 
     public Paciente actualizar(Paciente paciente) throws Exception;
 
+    void eliminar(Long id) throws Exception;
+
 //    public boolean eliminar(Long codigo) throws Exception;
 }

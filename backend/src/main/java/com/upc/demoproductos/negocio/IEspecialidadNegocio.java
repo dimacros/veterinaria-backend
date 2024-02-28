@@ -13,5 +13,7 @@ public interface IEspecialidadNegocio {
 
     public Especialidad actualizar(Especialidad especialidad) throws Exception;
 
+    void eliminar(Long id) throws Exception;
+
 //    public boolean eliminar(Long codigo) throws Exception;
 }
