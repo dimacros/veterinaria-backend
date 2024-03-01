@@ -38,10 +38,27 @@ public class Psicologo {
     public Psicologo() {
     }
 
-    public Psicologo(String nombres, String apellidos, String dni) {
+//    public Psicologo(String nombres, String apellidos, String dni) {
+//        this.nombres = nombres;
+//        this.apellidos = apellidos;
+//        this.dni = dni;
+//    }
+
+
+    public Psicologo(Long codigo, String nombres, String apellidos, String dni, String genero, Distrito distrito, String cmp, String cpp, String experiencia, Especialidad especialidad, String estudios, String email, String clave) {
+        this.codigo = codigo;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.dni = dni;
+        this.genero = genero;
+        this.distrito = distrito;
+        this.cmp = cmp;
+        this.cpp = cpp;
+        this.experiencia = experiencia;
+        this.especialidad = especialidad;
+        this.estudios = estudios;
+        this.email = email;
+        this.clave = clave;
     }
 
     @Override

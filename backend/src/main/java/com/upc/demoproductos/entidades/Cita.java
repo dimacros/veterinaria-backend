@@ -38,11 +38,15 @@ public class Cita {
     public Cita() {
     }
 
-//    public Cita(Paciente paciente, Psicologo psicologo, Especialidad especialidad) {
-//        this.paciente = paciente;
-//        this.psicologo = psicologo;
-//        this.especialidad = especialidad;
-//    }
+    public Cita(Long codigo, Paciente paciente, Psicologo psicologo, String fecha, String hora, String estado, String apuntes) {
+        this.codigo = codigo;
+        this.paciente = paciente;
+        this.psicologo = psicologo;
+        this.fecha = fecha;
+        this.hora = hora;
+        this.estado = estado;
+        this.apuntes = apuntes;
+    }
 
     @Override
     public String toString() {
