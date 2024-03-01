@@ -14,5 +14,7 @@ public interface ICitaNegocio {
 
     public Cita actualizar(Cita cita) throws Exception;
 
+    void eliminar(Long id) throws Exception;
+
 //    public boolean eliminar(Long codigo) throws Exception;
 }

@@ -57,7 +57,10 @@ public class PacienteRest {
         return pacienteNegocio.actualizar(paciente);
     }
 
-    // TODO Eliminar
+    @DeleteMapping("/paciente")
+    public void eliminar(@PathVariable Long id) throws Exception {
+        pacienteNegocio.eliminar(id);
+    }
 
     // Swagger
 

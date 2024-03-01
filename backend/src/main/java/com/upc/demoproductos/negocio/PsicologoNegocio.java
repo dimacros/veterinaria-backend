@@ -38,4 +38,10 @@ public class PsicologoNegocio implements IPsicologoNegocio {
         buscar(psicologo.getCodigo()); // no requiere asignar a una var
         return iPsicologoRepositorio.save(psicologo);
     }
+
+    @Override
+    public void eliminar(Long id) throws Exception {
+        Psicologo psicologo = buscar(id);
+        iPsicologoRepositorio.delete(psicologo);
+    }
 }

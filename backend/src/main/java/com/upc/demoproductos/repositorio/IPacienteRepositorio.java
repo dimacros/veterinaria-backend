@@ -13,6 +13,8 @@ public interface IPacienteRepositorio extends JpaRepository<Paciente, Long> {
 
     public List<Paciente> findByNombresStartingWith(String prefix); // Spring Data
 
+    public List<Paciente> findByEmailAndClave(String email, String clave);
+
     // Hibernate
 //    @Query("SELECT p FROM Paciente p WHERE p.descripcion like %:prefijo%")
 //    public List<Producto> obtenerReportePorDescripcion(@Param("prefijo") String prefijo);

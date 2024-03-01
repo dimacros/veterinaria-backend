@@ -14,5 +14,7 @@ public interface IDistritoNegocio {
 
     public Distrito actualizar(Distrito distrito) throws Exception;
 
+    void eliminar(Long id) throws Exception;
+
 //    public boolean eliminar(Long codigo) throws Exception;
 }

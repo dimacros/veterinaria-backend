@@ -38,4 +38,10 @@ public class DistritoNegocio implements IDistritoNegocio {
         buscar(distrito.getCodigo()); // no requiere asignar a una var
         return iDistritoRepositorio.save(distrito);
     }
+
+    @Override
+    public void eliminar(Long id) throws Exception {
+        Distrito distrito = buscar(id); // no requiere asignar a una var
+        iDistritoRepositorio.delete(distrito);
+    }
 }

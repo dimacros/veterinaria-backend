@@ -37,4 +37,10 @@ public class EspecialidadNegocio implements IEspecialidadNegocio {
         buscar(especialidad.getCodigo()); // no requiere asignar a una var
         return iEspecialidadRepositorio.save(especialidad);
     }
+
+    @Override
+    public void eliminar(Long id) throws Exception {
+        Especialidad especialidad = buscar(id);
+        iEspecialidadRepositorio.delete(especialidad);
+    }
 }

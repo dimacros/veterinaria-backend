@@ -10,4 +10,5 @@ public interface IPsicologoRepositorio extends JpaRepository<Psicologo, Long> {
 
     public List<Especialidad> findByNombresStartingWith(String prefix); // Spring Data
     public List<Especialidad> findByApellidosStartingWith(String prefix); // Spring Data
+    public List<Psicologo> findByEmailAndClave(String email, String clave);
 }

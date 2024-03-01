@@ -51,7 +51,10 @@ public class DistritoRest {
 //        return distritoNegocio.actualizar(paciente);
 //    }
 
-    // TODO Eliminar
+    @DeleteMapping("/distrito")
+    public void eliminar(@PathVariable Long id) throws Exception {
+        distritoNegocio.eliminar(id);
+    }
 
     // Swagger
 

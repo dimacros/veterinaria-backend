@@ -38,4 +38,10 @@ public class CitaNegocio implements ICitaNegocio {
         buscar(cita.getCodigo()); // no requiere asignar a una var
         return iCitaRepositorio.save(cita);
     }
+
+    @Override
+    public void eliminar(Long id) throws Exception {
+        Cita cita = buscar(id);
+        iCitaRepositorio.delete(cita);
+    }
 }
